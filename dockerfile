@@ -1,10 +1,10 @@
-FROM node:9
+FROM node:10
 
 WORKDIR /usr/node
 
 COPY package*.json ./
 
-RUN npm ci --only=production
+RUN npm install
 
 COPY . .
 
